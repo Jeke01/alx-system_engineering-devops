@@ -1,0 +1,51 @@
+eo
+t /etc/passwd
+
+Task 15
+k 15
+#!/bin/bash
+grep bin /etc/passwd | wc -l
+
+Task 16
+#!/bin/bash
+grep -A 3 'root' /etc/passwd
+
+Task 17
+#!/bin/bash
+grep -v bin /etc/passwd
+
+Task 18
+#!/bin/bash
+grep '^[[:upper:]]\|^[[:lower:]]' /etc/ssh/sshd_config
+
+Task 19
+#!/bin/bash
+tr Ac Ze
+
+Task 20
+#!/bin/bash
+tr -d cC
+
+Task 21
+#!/bin/bash
+rev
+
+Task 22
+#!/bin/bash
+cut -d':' -f1,6  /etc/passwd | sort
+
+Task 23 
+#!/bin/bash
+find . -empty -printf '%f\n'
+
+Task 24
+#!/bin/bash
+find -type f -name "*.gif" | rev | cut -d "/" -f 1 | cut -d '.' -f 2- | rev | LC_ALL=C sort -f
+
+Task 25
+#!/bin/bash
+cut -c 1 | paste -s -d ''
+
+Task 26
+#!/bin/bash
+tail -n +2 | cut -f -1 | sort -k 1 | uniq -c | sort -rnk 1 | head -n 11 | rev | cut -d ' ' -f -1 | revoot:x:0:0:root:/root:/bin/bash
